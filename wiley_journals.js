@@ -1,4 +1,4 @@
-const wiley_journals = [
+export const wiley_journals = [
 "Abacus",
 "Academic Emergency Medicine",
 "Accounting & Finance",

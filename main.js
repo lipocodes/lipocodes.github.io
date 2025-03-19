@@ -16,8 +16,8 @@ document.getElementById('searchInput').addEventListener('input', function() {
         journal.toLowerCase().includes(searchTerm)
     );
 
-    const wileyElement = document.createElement('wiley');
-wileyElement.textContent = "This is the text content.";
+    const wileyElement = document.createElement('div');
+    wileyElement.textContent = "This is the text content.";
 
 // Append the element to the document (e.g., to the body)
 document.body.appendChild(wileyElement);

@@ -15,9 +15,35 @@
 <ul id="searchResults"></ul>	
 	
 <script>
-let wiley_list = ["journal1", "journal2"];
-alert(wiley_list[0])	
-</script>
+        const journalList = ["Journal of Public Health", "Nature", "Science", "PLOS One", "The Lancet"];
+
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase(); // Use 'this'
+            const resultsList = document.getElementById('searchResults');
+            resultsList.innerHTML = ''; // Clear previous results
+
+            if (searchTerm.trim() === '') {
+                return; // Don't search if input is empty
+            }
+
+            const filteredJournals = journalList.filter(journal =>
+                journal.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredJournals.length === 0) {
+                const noResults = document.createElement('li');
+                noResults.textContent = 'No matching journals found.';
+                resultsList.appendChild(noResults);
+            } else {
+                filteredJournals.forEach(journal => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = journal;
+                    resultsList.appendChild(listItem);
+                });
+            }
+        });
+
+    </script>
 
 </body>
 

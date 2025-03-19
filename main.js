@@ -7,6 +7,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
     const resultsList = document.getElementById('searchResults');
     const publisherName = document.getElementById('publisherName');
+    publisherName.innerHTML = '';
     resultsList.innerHTML = '';
 
     if (searchTerm.trim() === '') {
@@ -19,7 +20,6 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
     
     if (filteredJournals.length === 0) {
-        publisherName.innerHTML = ""
         const noResults = document.createElement('li');
         noResults.textContent = 'No matching journals found.';
         resultsList.appendChild(noResults);

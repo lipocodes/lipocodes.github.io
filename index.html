@@ -14,36 +14,7 @@
 <input type="text" id="searchInput" placeholder="Enter journal name...">
 <ul id="searchResults"></ul>	
 	
-<script>
-        const journalList = wiley_journals;
 
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase(); // Use 'this'
-            const resultsList = document.getElementById('searchResults');
-            resultsList.innerHTML = ''; // Clear previous results
-
-            if (searchTerm.trim() === '') {
-                return; // Don't search if input is empty
-            }
-
-            const filteredJournals = journalList.filter(journal =>
-                journal.toLowerCase().includes(searchTerm)
-            );
-
-            if (filteredJournals.length === 0) {
-                const noResults = document.createElement('li');
-                noResults.textContent = 'No matching journals found.';
-                resultsList.appendChild(noResults);
-            } else {
-                filteredJournals.forEach(journal => {
-                    const listItem = document.createElement('li');
-                    listItem.textContent = journal;
-                    resultsList.appendChild(listItem);
-                });
-            }
-        });
-
-    </script>
 
     <script>
 
@@ -1330,6 +1301,37 @@ Zoologica Scripta
 Zoonoses and Public Health
 ]
     </script>	
+
+	<script>
+        const journalList = wiley_journals;
+
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase(); // Use 'this'
+            const resultsList = document.getElementById('searchResults');
+            resultsList.innerHTML = ''; // Clear previous results
+
+            if (searchTerm.trim() === '') {
+                return; // Don't search if input is empty
+            }
+
+            const filteredJournals = journalList.filter(journal =>
+                journal.toLowerCase().includes(searchTerm)
+            );
+
+            if (filteredJournals.length === 0) {
+                const noResults = document.createElement('li');
+                noResults.textContent = 'No matching journals found.';
+                resultsList.appendChild(noResults);
+            } else {
+                filteredJournals.forEach(journal => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = journal;
+                    resultsList.appendChild(listItem);
+                });
+            }
+        });
+
+    </script>
 
 </body>
 

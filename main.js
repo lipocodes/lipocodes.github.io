@@ -19,6 +19,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
     
     if (filteredJournals.length === 0) {
+        publisherName.innerHTML = ""
         const noResults = document.createElement('li');
         noResults.textContent = 'No matching journals found.';
         resultsList.appendChild(noResults);

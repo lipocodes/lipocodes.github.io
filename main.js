@@ -18,7 +18,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     );
 
 
-    publisherName.innerHTML = "Wiley Journals:\n\n"
+    publisherName.innerHTML = "Wiley Journals:"
     
     if (filteredJournals.length === 0) {
         const noResults = document.createElement('li');

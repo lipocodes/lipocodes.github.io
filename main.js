@@ -16,6 +16,12 @@ document.getElementById('searchInput').addEventListener('input', function() {
         journal.toLowerCase().includes(searchTerm)
     );
 
+    const wileyElement = document.createElement('wiley');
+wileyElement.textContent = "This is the text content.";
+
+// Append the element to the document (e.g., to the body)
+document.body.appendChild(wileyElement);
+    
     if (filteredJournals.length === 0) {
         const noResults = document.createElement('li');
         noResults.textContent = 'No matching journals found.';

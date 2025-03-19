@@ -6,7 +6,9 @@ const journalList = wiley_journals;
 document.getElementById('searchInput').addEventListener('input', function() {
     const searchTerm = this.value.toLowerCase();
     const resultsList = document.getElementById('searchResults');
+    const publisherName = document.getElementById('publisherName');
     resultsList.innerHTML = '';
+    publisherName.innerHTML = 'Wiley Journals:\n\n';
 
     if (searchTerm.trim() === '') {
         return;
@@ -23,6 +25,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
         resultsList.appendChild(noResults);
     } else {
         filteredJournals.forEach(journal => {
+            publisherName.innerHTML = "Wiley Journals:\n\n"
             const listItem = document.createElement('li');
             listItem.textContent = journal;
             resultsList.appendChild(listItem);

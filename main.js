@@ -17,7 +17,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     );
 
     const wileyElement = document.createElement('div');
-    wileyElement.innerHTML = "Wiley journals\n\n";
+    wileyElement.innerHTML = "<b>Wiley journals:</b>\n\n";
 
 // Append the element to the document (e.g., to the body)
 document.body.appendChild(wileyElement);

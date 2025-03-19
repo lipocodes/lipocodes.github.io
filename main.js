@@ -17,14 +17,13 @@ document.getElementById('searchInput').addEventListener('input', function() {
         journal.toLowerCase().includes(searchTerm)
     );
 
-
-    publisherName.innerHTML = "Wiley Journals:"
     
     if (filteredJournals.length === 0) {
         const noResults = document.createElement('li');
         noResults.textContent = 'No matching journals found.';
         resultsList.appendChild(noResults);
     } else {
+        publisherName.innerHTML = "Wiley Journals:"
         filteredJournals.forEach(journal => {
             
             const listItem = document.createElement('li');

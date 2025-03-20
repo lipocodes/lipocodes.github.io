@@ -18,12 +18,13 @@ document.getElementById('searchInput').addEventListener('input', function() {
   }
 
   journalPublishers.forEach(publisher => {
+    publisherName.innerHTML = `<h3>${publisher.name}</h3>`;
     const filteredJournals = publisher.journals.filter(journal =>
       journal.toLowerCase().includes(searchTerm)
     );
 
     if (filteredJournals.length > 0) {
-      publisherName.innerHTML += `<h3>${publisher.name}</h3>`; // Add publisher name as a heading
+      //publisherName.innerHTML += `<h3>${publisher.name}</h3>`; // Add publisher name as a heading
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.textContent = journal;

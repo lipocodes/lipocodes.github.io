@@ -1,4 +1,4 @@
-export const wiley_journals = [
+export const sage_journals = [
 "Advances in Communication and Swallowing",
 "Algorithmic Finance",
 "Applied Ontology",

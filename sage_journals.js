@@ -1,4 +1,4 @@
-const sage_journals = [
+port const sage_journals = [
 "Journal",
 "Abhigyan",
 "About Campus",

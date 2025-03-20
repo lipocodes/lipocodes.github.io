@@ -23,7 +23,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     );
 
     if (filteredJournals.length > 0) {
-      publisherName.innerHTML += `<h3>${publisher.name}</h3>`; // Add publisher name as a heading
+      #publisherName.innerHTML += `<h3>${publisher.name}</h3>`; // Add publisher name as a heading
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.textContent = journal;

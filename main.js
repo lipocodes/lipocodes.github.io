@@ -30,9 +30,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
     if (filteredJournals.length > 0) {
       publisherResultsFound = true; // Set flag to true
-      const iframe = document.getElementById('iframe');
-      iframe.style.height = '500px';
-
+     
       // Add publisher title
       const publisherTitle = document.createElement('li');
       publisherTitle.textContent = publisher.name;
@@ -63,8 +61,6 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
   // Display "No results" if nothing was found
   if (!publisherResultsFound) {
-    const iframe = document.getElementById('iframe');
-    iframe.style.height = '250px';
     const noResults = document.createElement('li');
     noResults.textContent = 'No matching journals found.';
     resultsList.appendChild(noResults);

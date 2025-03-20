@@ -1,4 +1,4 @@
-port const sage_journals = [
+export const sage_journals = [
 "Journal",
 "Abhigyan",
 "About Campus",

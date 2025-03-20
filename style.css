@@ -1,0 +1,62 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #007bff; /* Highlight on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow on focus */
+}
+
+#publisherName {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#searchResults {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#searchResults li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+#searchResults li:hover {
+    background-color: #f0f0f0; /* Lighter background on hover */
+    cursor: pointer;
+}
+
+#searchResults li a {
+    text-decoration: none;
+    color: #333;
+    display: block; /* Make the entire list item clickable */
+}
+
+#searchResults li a:hover {
+    color: #007bff; /* Change link color on hover */
+}
+
+/* Optional: Add a subtle shadow to list items */
+#searchResults li {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

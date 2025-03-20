@@ -48,7 +48,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
       if (index < journalPublishers.length - 1) { // Check if it's not the last publisher
         for (let i = 0; i < 3; i++) {
           const publisherLineBreak = document.createElement('div');
-          publisherLineBreak.style.marginTop = '5px';
+          publisherLineBreak.style.marginTop = '20px';
           resultsList.appendChild(publisherLineBreak);
         }
       }

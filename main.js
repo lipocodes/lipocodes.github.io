@@ -1,4 +1,3 @@
-// main.js
 import { wiley_journals } from './wiley_journals.js';
 import { sage_journals } from './sage_journals.js';
 

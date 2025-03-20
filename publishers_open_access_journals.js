@@ -1,4 +1,4 @@
-export const Springer_journals = [
+export const springer_journals = [
 "3 Biotech",
 "4OR",
 "AAPS PharmSciTech",
@@ -2319,7 +2319,7 @@ export const Springer_journals = [
 
 
 
-export const Wiley_journals = [
+export const wiley_journals = [
 "Abacus",
 "Academic Emergency Medicine",
 "Accounting & Finance",
@@ -3605,7 +3605,7 @@ export const Wiley_journals = [
 
 
 
-export const Taylor_Francis_journals = [
+export const taylor_francis_journals = [
 "3 Biotech",
 "4OR",
 "AAPS PharmSciTech",
@@ -5926,7 +5926,7 @@ export const Taylor_Francis_journals = [
 
 
 
-export const Sage_journals = [
+export const sage_journals = [
 "Abhigyan",
 "About Campus",
 "Academic Forensic Pathology",

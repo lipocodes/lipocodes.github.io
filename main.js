@@ -18,7 +18,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
   }
 
   journalPublishers.forEach(publisher => {
-    publisherName.innerHTML = `<h3>${publisher.name}</h3>`;
+    publisherName.innerHTML += `<h3>${publisher.name}</h3>`;
     const filteredJournals = publisher.journals.filter(journal =>
       journal.toLowerCase().includes(searchTerm)
     );

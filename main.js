@@ -29,6 +29,11 @@ document.getElementById('searchInput').addEventListener('input', function() {
       publisherTitle.style.fontWeight = 'bold';
       resultsList.appendChild(publisherTitle);
 
+      // Add line break (using a div for better styling control)
+      const lineBreak = document.createElement('div');
+      lineBreak.style.marginTop = '5px'; // Adjust margin as needed
+      resultsList.appendChild(lineBreak);
+
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.textContent = journal;

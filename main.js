@@ -26,7 +26,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
       // Add publisher title
       const publisherTitle = document.createElement('li');
       publisherTitle.textContent = publisher.name;
-      publisherTitle.style.fontWeight = 'bold'; // Optional: Make it bold
+      publisherTitle.style.fontWeight = 'bold';
       resultsList.appendChild(publisherTitle);
 
       filteredJournals.forEach(journal => {

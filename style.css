@@ -3,10 +3,10 @@
  list-style-type: none; 
  padding: 0; 
  display: flex; 
- flex-direction: 
-  column; gap: 10px;
+ flex-direction: column;
 }
 
 #searchResults li {
-        font-size: 16px; /* Set the desired font size */
-    }
+  font-size: 16px;
+  margin-bottom: 10px;
+}

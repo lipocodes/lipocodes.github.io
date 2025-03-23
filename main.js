@@ -85,15 +85,17 @@ function create_link(journal) {
     // Return the string and if the url exists.
      return `<a href="${url}" target="_blank" style="
         display: inline-block;
-        padding: 10px 20px;
-        background-color: #4CAF50; /* Green background */
-        color: white; /* White text */
-        text-decoration: none; /* Remove underline */
-        border-radius: 5px; /* Rounded corners */
-        font-family: 'Arial', sans-serif; /* Nice font */
-        font-size: 16px;
-        transition: background-color 0.3s ease; /* Smooth transition */
-    " onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#4CAF50'">
+        padding: 8px 15px;
+        background-color: #e0f7fa; /* Light blue background */
+        color: #0d47a1; /* Dark blue text */
+        text-decoration: none;
+        border: 1px solid #039be5; /* Blue border */
+        border-radius: 3px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    " onmouseover="this.style.backgroundColor='#b3e5fc'; this.style.borderColor='#0288d1'" onmouseout="this.style.backgroundColor='#e0f7fa'; this.style.borderColor='#039be5'">
         ${journal}
     </a>`;
 }

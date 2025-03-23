@@ -98,7 +98,12 @@ async function create_link(journal) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 async function ping_url(url){
   try{
-    return true;
+    const response = await fetch(url);
+    if(response.ok){
+      return true;
+    }else{
+      return false;
+    }  
   } catch(e){
     return false;
   }

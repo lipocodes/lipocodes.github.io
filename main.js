@@ -1,5 +1,7 @@
-// Taylor-Francis: https://www.tandfonline.com/action/doSearch?target=titleSearch&SeriesKey=cthe
-
+// Taylor-Francis:  read code from excel https://www.tandfonline.com/action/doSearch?target=titleSearch&SeriesKey=cthe
+//Sage: column in excel conatins links
+//Wiley: already contains url
+//Springer: https://research.com/journal/American-Journal-of-Sexuality-Education
 import { wiley_journals } from './publishers_open_access_journals.js';
 import { sage_journals } from './publishers_open_access_journals.js';
 import { taylor_francis_journals } from './publishers_open_access_journals.js';

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Search for Open Access Journals</title>
+    <title>Search Journals</title>
     <link rel="stylesheet" href="style.css"> </head>
 </head>
 <body>
-   <div>
-    <div style="text-align: center; margin-bottom: 50px; display: block;">
-        Free APCs! YVC researchers may not need to pay open access fees for publications in thousands of hybrid journals published by: </br>
-        Sage, Wiley, Taylor & Francis, and Springer. <br/>
+    <p style="text-align: center; margin-bottom:50px;">
+      Free APCs!  YVC researchers may not need to pay open access fees for publications in thousands of hybrid journals published by: </br>
+      Sage, Wiley, Taylor & Francis, and Springer. <br/>
+    </p>
+    <div style="display: flex; justify-content: center;">
+       <input type="text" id="searchInput" placeholder="Enter journal name...">
     </div>
-    <div style="display: flex; justify-content: center; display: block;">
-        <input type="text" id="searchInput" placeholder="Enter journal name...">
+    <p id="publisherName"></p>
+    <ul id="searchResults" style="height: 100px;"></ul>
     </div>
-    <div id="publisherName" style="display: block;"></div>
-    <ul id="searchResults" style="height: 100px; display: block;"></ul>
-</div>
     <script type="module" src="main.js"></script>
 
 </body>

@@ -83,19 +83,14 @@ function create_link(journal) {
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
     // Return the string and if the url exists.
-     return `<a href="${url}" target="_blank" style="
-        display: inline-block;
-        padding: 8px 15px;
-        background-color: #e0f7fa; /* Light blue background */
-        color: #0d47a1; /* Dark blue text */
+        return `<a href="${url}" target="_blank" style="
+        color: #2e86c1; /* A nice blue */
         text-decoration: none;
-        border: 1px solid #039be5; /* Blue border */
-        border-radius: 3px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size: 14px;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    " onmouseover="this.style.backgroundColor='#b3e5fc'; this.style.borderColor='#0288d1'" onmouseout="this.style.backgroundColor='#e0f7fa'; this.style.borderColor='#039be5'">
+        font-family: 'Georgia', serif; /* Elegant font */
+        font-size: 16px;
+        border-bottom: 1px solid transparent; /* Transparent border, for hover effect */
+        transition: border-bottom 0.3s ease, color 0.3s ease;
+    " onmouseover="this.style.borderBottom='1px solid #2e86c1'; this.style.color='#1f618d'" onmouseout="this.style.borderBottom='1px solid transparent'; this.style.color='#2e86c1'">
         ${journal}
     </a>`;
 }

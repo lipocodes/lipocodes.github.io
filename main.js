@@ -88,5 +88,5 @@ function create_link(journal){
  }catch(e){
   alert("false");
  }
- return `<a href="https://research.com/journal/${formattedString}" target="_blank" style="text-decoration: none;">${journal}</a>`
+ return `<a href=${url} target="_blank" style="text-decoration: none;">${journal}</a>`
 }

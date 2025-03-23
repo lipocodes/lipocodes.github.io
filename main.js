@@ -48,7 +48,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = await create_link(journal);
+        listItem.innerHTML = create_link(journal);
         resultsList.appendChild(listItem);
       });
 
@@ -72,21 +72,17 @@ document.getElementById('searchInput').addEventListener('input', function() {
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-async function create_link(journal){
- //Remove colons and ampersands, and convert to lowercase
- let cleanedString = journal.replace(/[:&]/g, '').toLowerCase();
- //Split the string into words
- let words = cleanedString.split(/\s+/);
- //Filter out empty words (if any)
- words = words.filter(word => word !== ''); 
- //Join the words with hyphens
- let formattedString = words.join('-'); 
- const url = `https://research.com/journal/${formattedString}`;
- try{
-  const response = await fetch(url, { method: 'HEAD', mode: 'cors' });
-  alert(response.ok) 
- }catch(e){
-  alert("false");
- }
- return `<a href=${url} target="_blank" style="text-decoration: none;">${journal}</a>`
+function create_link(journal) {
+    // Remove colons and ampersands, and convert to lowercase
+    let cleanedString = journal.replace(/[:&]/g, '').toLowerCase();
+    // Split the string into words
+    let words = cleanedString.split(/\s+/);
+    // Filter out empty words (if any)
+    words = words.filter(word => word !== '');
+    // Join the words with hyphens
+    let formattedString = words.join('-');
+    const url = `https://research.com/journal/${formattedString}`;
+    // Return the string and if the url exists.
+    return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
 }
+

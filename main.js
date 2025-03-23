@@ -1,3 +1,5 @@
+// Taylor-Francis: https://www.tandfonline.com/action/doSearch?target=titleSearch&SeriesKey=cthe
+
 import { wiley_journals } from './publishers_open_access_journals.js';
 import { sage_journals } from './publishers_open_access_journals.js';
 import { taylor_francis_journals } from './publishers_open_access_journals.js';

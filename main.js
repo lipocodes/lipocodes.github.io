@@ -83,6 +83,18 @@ function create_link(journal) {
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
     // Return the string and if the url exists.
-    return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
+     return `<a href="${url}" target="_blank" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        text-decoration: none; /* Remove underline */
+        border-radius: 5px; /* Rounded corners */
+        font-family: 'Arial', sans-serif; /* Nice font */
+        font-size: 16px;
+        transition: background-color 0.3s ease; /* Smooth transition */
+    " onmouseover="this.style.backgroundColor='#45a049'" onmouseout="this.style.backgroundColor='#4CAF50'">
+        ${journal}
+    </a>`;
 }
 

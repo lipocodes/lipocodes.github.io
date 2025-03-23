@@ -74,7 +74,12 @@ document.getElementById('searchInput').addEventListener('input', function() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function create_link(journal) {
     // Remove colons and ampersands, and convert to lowercase
-    let cleanedString = journal.replace(/[:&]/g, '').toLowerCase();
+    let cleanedString = journal
+    .replace(/[:&]/g, '') // Remove colons and ampersands
+    .replace(/\bthe\b/gi, '') // Remove "the" (case-insensitive)
+    .toLowerCase(); // Convert to lowercase
+  // Remove leading/trailing spaces and multiple spaces
+  cleanedString = cleanedString.trim().replace(/\s+/g, ' ');
     // Split the string into words
     let words = cleanedString.split(/\s+/);
     // Filter out empty words (if any)

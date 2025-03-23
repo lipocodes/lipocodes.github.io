@@ -48,7 +48,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href='https://www.wiley.com/en-us/network/publishing/research-publishing/open-access'>${journal}</a>`;
+        listItem.innerHTML = create_link(journal);
         resultsList.appendChild(listItem);
       });
 
@@ -70,3 +70,8 @@ document.getElementById('searchInput').addEventListener('input', function() {
     resultsList.appendChild(noResults);
   }
 });
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function create_link(journal){
+ return `<a href='https://www.wiley.com/en-us/network/publishing/research-publishing/open-access'>${journal}</a>`
+}

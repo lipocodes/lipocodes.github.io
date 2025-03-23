@@ -81,5 +81,5 @@ function create_link(journal){
  words = words.filter(word => word !== ''); 
  //Join the words with hyphens
  let formattedString = words.join('-'); 
- return `<a href="https://research.com/journal/${formattedString}">journal</a>`
+ return `<a href="https://research.com/journal/${formattedString}">${journal}</a>`
 }

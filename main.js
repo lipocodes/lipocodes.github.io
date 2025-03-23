@@ -85,7 +85,7 @@ function create_link(journal){
  try{
   const response = await fetch(url, { method: 'HEAD', mode: 'cors' });
   alert(response.ok) 
- }cath(e){
+ }catch(e){
   alert("false");
  }
  return `<a href="https://research.com/journal/${formattedString}" target="_blank" style="text-decoration: none;">${journal}</a>`

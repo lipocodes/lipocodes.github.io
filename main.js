@@ -44,7 +44,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
-        listItem.textContent = journal;
+        listItem.textContent = "<a href='https://www.wiley.com/en-us/network/publishing/research-publishing/open-access' target="_blank">" + journal + </a>;
         resultsList.appendChild(listItem);
       });
 

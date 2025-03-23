@@ -72,7 +72,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function create_link(journal) {
+async function create_link(journal) {
     // Remove colons and ampersands, and convert to lowercase
     let cleanedString = journal
     .replace(/[:&]/g, '') // Remove colons and ampersands

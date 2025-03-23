@@ -87,15 +87,19 @@ async function create_link(journal) {
     // Join the words with hyphens
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
-    ping_result = await(ping_url(url));
-    if(ping_result==true){
+    return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
+    /*ping_url(url)
+    
+     ping_result = await(ping_url(url));
+     if(ping_result==true){
       return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
     }else{
         return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
     }
-   
+   */
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
 async function ping_url(url){
   try{
     const response = await fetch(url);
@@ -108,3 +112,4 @@ async function ping_url(url){
     return false;
   }
 }
+*/

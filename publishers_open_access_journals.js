@@ -1,4 +1,4 @@
-export const Springer_journals = [
+export const springer_journals = [
 "3 Biotech",
 "4OR",
 "AAPS PharmSciTech",

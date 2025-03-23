@@ -81,5 +81,12 @@ function create_link(journal){
  words = words.filter(word => word !== ''); 
  //Join the words with hyphens
  let formattedString = words.join('-'); 
+ const url = `https://research.com/journal/${formattedString}`;
+ try{
+  const response = await fetch(url, { method: 'HEAD', mode: 'cors' });
+  alert(response.ok) 
+ }cath(e){
+  alert("false");
+ }
  return `<a href="https://research.com/journal/${formattedString}" target="_blank" style="text-decoration: none;">${journal}</a>`
 }

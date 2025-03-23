@@ -74,7 +74,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function create_link(journal){
  //Remove colons and ampersands, and convert to lowercase
- let cleanedString = inputString.replace(/[:&]/g, '').toLowerCase();
+ let cleanedString = journal.replace(/[:&]/g, '').toLowerCase();
  //Split the string into words
  let words = cleanedString.split(/\s+/);
  //Filter out empty words (if any)

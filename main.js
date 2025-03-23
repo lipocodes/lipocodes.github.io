@@ -73,5 +73,13 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function create_link(journal){
- return `<a href='https://www.wiley.com/en-us/network/publishing/research-publishing/open-access'>${journal}</a>`
+ //Remove colons and ampersands, and convert to lowercase
+ let cleanedString = inputString.replace(/[:&]/g, '').toLowerCase();
+ //Split the string into words
+ let words = cleanedString.split(/\s+/);
+ //Filter out empty words (if any)
+ words = words.filter(word => word !== ''); 
+ //Join the words with hyphens
+ let formattedString = words.join('-'); 
+ return formattedString;
 }

@@ -54,7 +54,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
       // Add three line breaks between publishers (except after the last one)
       if (index < journalPublishers.length - 1) { // Check if it's not the last publisher
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 1; i++) {
           const publisherLineBreak = document.createElement('div');
           publisherLineBreak.style.marginTop = '50px';
           resultsList.appendChild(publisherLineBreak);

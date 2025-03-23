@@ -91,7 +91,7 @@ async function create_link(journal) {
     if(ping_result==true){
       return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
     }else{
-       //Run a Google query
+        return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
     }
    
 }

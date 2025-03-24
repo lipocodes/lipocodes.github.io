@@ -51,7 +51,13 @@ document.getElementById('searchInput').addEventListener('input', function() {
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
-        if(publisher.name =="Wiley Journals" || publisher.name == "Taylor Francis Journals" || publisher.name == "Springer Journals"){
+        if(publisher.name =="Taylor Francis Journals"){
+          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing, max 9 yearly publications)</span>`;
+        }
+        else if(publisher.name == "Springer Journals"){
+         listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing, max 3 yearly publications)</span>`;
+        }
+        else if(publisher.name =="Wiley Journals" ){
           listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`;
         }
         else if(publisher.name == "Sage Choice Journals"){

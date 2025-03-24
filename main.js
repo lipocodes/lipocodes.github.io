@@ -49,7 +49,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
-        if(publisher.name =="Wiley Journals"){
+        if(publisher.name =="Wiley Journals" || publisher.name == "Taylor Francis Journals"){
           listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`
         }
         resultsList.appendChild(listItem);

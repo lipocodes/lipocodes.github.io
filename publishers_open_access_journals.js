@@ -5666,7 +5666,7 @@ export const taylor_francis_journals = [
 
 
 
-export const sage_journals = [
+export const sage_choice_journals = [
 "Abhigyan",
 "About Campus",
 "Academic Forensic Pathology",

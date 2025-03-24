@@ -52,7 +52,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
         if(publisher.name =="Wiley Journals" || publisher.name == "Taylor Francis Journals" || publisher.name == "Springer Journals"){
           listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`;
         }
-        else(publisher.name == "Sage Choice Journals"){
+        else if(publisher.name == "Sage Choice Journals"){
          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Publication cost: £200)</span>`
         }
         resultsList.appendChild(listItem);

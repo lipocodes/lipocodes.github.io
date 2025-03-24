@@ -7,6 +7,8 @@ import { sage_choice_journals } from './publishers_open_access_journals.js';
 import { sage_gold_journals } from './publishers_open_access_journals.js';
 import { taylor_francis_journals } from './publishers_open_access_journals.js';
 import { springer_journals } from './publishers_open_access_journals.js';
+import { oxford_journals } from './publishers_open_access_journals.js';
+import { elsevier_journals } from './publishers_open_access_journals.js';
 
 const journalPublishers = [
   { name: "Wiley Journals", journals: wiley_journals },
@@ -14,6 +16,8 @@ const journalPublishers = [
   { name: "Sage Gold Journals", journals: sage_gold_journals },
   { name: "Taylor Francis Journals", journals: taylor_francis_journals },
   { name: "Springer Journals", journals: springer_journals },
+  { name: "Oxford Journals", journals: oxford_journals },
+  { name: "Elsevier Journals", journals: elsevier_journals },
 ];
 
 document.getElementById('searchInput').addEventListener('input', function() {
@@ -65,6 +69,12 @@ document.getElementById('searchInput').addEventListener('input', function() {
         }
         else if(publisher.name == "Sage Gold Journals"){
          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Publication cost discount: 20%)</span>`
+        }
+        else if(publisher.name == "Elsevier Journals"){
+         listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing, max 6 yearly publications)</span>`
+        }
+        else if(publisher.name == "Oxford Journals"){
+         listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`
         }
         resultsList.appendChild(listItem);
       });

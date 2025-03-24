@@ -49,6 +49,9 @@ document.getElementById('searchInput').addEventListener('input', function() {
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
+        if(publisher.name =="Wiley Journals"){
+          listItem.innerHTML += `\t - Free publishing`
+        }
         resultsList.appendChild(listItem);
       });
 
@@ -88,28 +91,7 @@ function create_link(journal) {
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
     return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
-    /*ping_url(url)
-    
-     ping_result = await(ping_url(url));
-     if(ping_result==true){
-      return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
-    }else{
-        return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
-    }
-   */
+
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/*
-async function ping_url(url){
-  try{
-    const response = await fetch(url);
-    if(response.ok){
-      return true;
-    }else{
-      return false;
-    }  
-  } catch(e){
-    return false;
-  }
-}
-*/
+

@@ -49,6 +49,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
       filteredJournals.forEach(journal => {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
+        console.log("aaaaaaaaaaaaaaa" + publisher.name);
         if(publisher.name =="Wiley Journals"){
           listItem.innerHTML += `\t - Free publishing`
         }

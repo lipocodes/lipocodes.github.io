@@ -50,7 +50,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
         if(publisher.name =="Wiley Journals"){
-          listItem.innerHTML += `<p style="font-size:12px; margin-left:50px; font-style: italic;">Free publishing</p>`
+          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`
         }
         resultsList.appendChild(listItem);
       });

@@ -3,13 +3,13 @@
 //Wiley: already contains url
 //Springer: https://research.com/journal/American-Journal-of-Sexuality-Education
 import { wiley_journals } from './publishers_open_access_journals.js';
-import { sage_journals } from './publishers_open_access_journals.js';
+import { sage_choice_journals } from './publishers_open_access_journals.js';
 import { taylor_francis_journals } from './publishers_open_access_journals.js';
 import { springer_journals } from './publishers_open_access_journals.js';
 
 const journalPublishers = [
   { name: "Wiley Journals", journals: wiley_journals },
-  { name: "Sage Journals", journals: sage_journals },
+  { name: "Sage Choice Journals", journals: sage_choice_journals },
   { name: "Taylor Francis Journals", journals: taylor_francis_journals },
   { name: "Springer Journals", journals: springer_journals },
 ];

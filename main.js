@@ -50,7 +50,10 @@ document.getElementById('searchInput').addEventListener('input', function() {
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
         if(publisher.name =="Wiley Journals" || publisher.name == "Taylor Francis Journals" || publisher.name == "Springer Journals"){
-          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`
+          listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Free publishing)</span>`;
+        }
+        else(publisher.name == "Sage Choice Journals"){
+         listItem.innerHTML += `<span style="font-size:12px; margin-left:50px; font-style: italic;">(Publication cost: £200)</span>`
         }
         resultsList.appendChild(listItem);
       });

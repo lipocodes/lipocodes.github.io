@@ -23,6 +23,7 @@ const journalPublishers = [
 let num_results = 0;
 
 document.getElementById('searchInput').addEventListener('input', function() {
+  num_results = 0;
   const searchTerm = this.value.toLowerCase();
   const resultsList = document.getElementById('searchResults');
   const publisherName = document.getElementById('publisherName');

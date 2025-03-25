@@ -21,7 +21,11 @@ const journalPublishers = [
 ];
 
 
+
 document.getElementById('searchInput').addEventListener('input', function() {
+  //let num_results = 0;
+  //let num_results = document.getElementById('number_results');
+  //num_results.innerHTML = `Results: ${num_results++}`
   const searchTerm = this.value.toLowerCase();
   const resultsList = document.getElementById('searchResults');
   const publisherName = document.getElementById('publisherName');

@@ -43,10 +43,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     if (filteredJournals.length > 0 && searchTerm.length > 3) {
       publisherResultsFound = true; 
     }
-    else{
-       num_results = 0;
-    }
-     
+ 
       // Add publisher title
       const publisherTitle = document.createElement('li');
       publisherTitle.textContent = publisher.name;

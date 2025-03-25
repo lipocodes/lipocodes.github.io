@@ -12,12 +12,17 @@
 
 #searchResults li {
   font-size: 1.0rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Slightly reduced margin for a tighter feel */
+  padding: 8px 12px; /* Add some padding for better touch targets and visual space */
+  border-left: 3px solid transparent; /* Add a subtle indicator */
+  transition: border-left 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Smooth transitions */
 }
 
- li:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover */
-    }
+#searchResults li:hover {
+  border-left-color: #007bff; /* Highlight color on hover (adjust as needed) */
+  background-color: #f8f9fa; /* Light background on hover (adjust as needed) */
+  cursor: pointer; /* Indicate it's interactive */
+}
 
 .search-input-container {
     display: flex;

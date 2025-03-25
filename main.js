@@ -41,7 +41,8 @@ document.getElementById('searchInput').addEventListener('input', function() {
     );
 
     if (filteredJournals.length > 0 && searchTerm.length > 3) {
-      publisherResultsFound = true; // Set flag to true
+      publisherResultsFound = true; 
+    }
     else{
        num_results = 0;
     }

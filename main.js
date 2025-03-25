@@ -57,7 +57,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
       filteredJournals.forEach(journal => {
         num_results = num_results + 1;
-        document.getElementById('number_results').innerHTML = `<p>${numResults}</p>`
+        document.getElementById('number_results').innerHTML = `<p>${num_results}</p>`
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
         if(publisher.name =="Taylor Francis Journals"){

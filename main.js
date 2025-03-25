@@ -20,9 +20,13 @@ const journalPublishers = [
   { name: "Elsevier Journals", journals: elsevier_journals },
 ];
 
+let length_previous_inserted_text=0;
+
 document.getElementById('searchInput').addEventListener('input', function() {
   const searchTerm = this.value.toLowerCase();
-  alert(searchTerm);
+  if(length_previous_inserted_text == 3 && searchTerm.length<3){
+    document.getElementById('searchInput').innerHTML = '';
+  }
   //we ignore the first 2 letters
   if(searchTerm.length<3) return;
   const resultsList = document.getElementById('searchResults');

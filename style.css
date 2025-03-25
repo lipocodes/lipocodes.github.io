@@ -23,9 +23,18 @@
   background-color: #e9ecef; 
 }
 
-h{
-   cursor: pointer; 
+a {
+  color: #007bff; 
+  text-decoration: none; 
+  transition: color 0.3s ease; 
 }
+
+a:hover {
+  color: #0056b3; 
+  text-decoration: underline; 
+  cursor: pointer; 
+}
+
 
 .search-input-container {
     display: flex;

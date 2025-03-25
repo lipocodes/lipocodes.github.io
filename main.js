@@ -117,15 +117,12 @@ function create_link(journal) {
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
     */
-  
-    return `<a href="${createGoogleSearchUrl(journal)}" target="_blank" style="text-decoration: none;">${journal}</a>`
+    const encodedJournalName = encodeURIComponent(journal);
+    const encodedSearchTerm = encodeURIComponent("journal");
+    const googleSearchUrl = `https://www.google.com/search?q=${encodedJournalName}+${encodedSearchTerm}`;
+    return `<a href="${googleSearchUrl}" target="_blank" style="text-decoration: none;">${journal}</a>`
 
 }
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function createGoogleSearchUrl(journalName) {
-  const encodedQuery = encodeURIComponent(journalName);
-  const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
-  return googleSearchUrl;
-}
+
 
 

@@ -19,9 +19,12 @@
 }
 
 #searchResults li:hover {
-  border-left-color: #007bff; /* Highlight color on hover (adjust as needed) */
-  background-color: #f8f9fa; /* Light background on hover (adjust as needed) */
-  cursor: pointer; /* Indicate it's interactive */
+  border-left-color: #0056b3; 
+  background-color: #e9ecef; 
+}
+
+h{
+   cursor: pointer; 
 }
 
 .search-input-container {

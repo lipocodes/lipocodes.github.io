@@ -23,7 +23,6 @@ const journalPublishers = [
 let num_results = 0;
 
 document.getElementById('searchInput').addEventListener('input', function() {
-  num_results = 0;
   const searchTerm = this.value.toLowerCase();
   const resultsList = document.getElementById('searchResults');
   const publisherName = document.getElementById('publisherName');
@@ -43,6 +42,9 @@ document.getElementById('searchInput').addEventListener('input', function() {
 
     if (filteredJournals.length > 0 && searchTerm.length > 3) {
       publisherResultsFound = true; // Set flag to true
+    else{
+       num_results = 0;
+    }
      
       // Add publisher title
       const publisherTitle = document.createElement('li');

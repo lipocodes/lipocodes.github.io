@@ -102,7 +102,8 @@ document.getElementById('searchInput').addEventListener('input', function() {
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function create_link(journal) {
     // Remove colons and ampersands, and convert to lowercase
-    let cleanedString = journal
+    /*
+     let cleanedString = journal
     .replace(/[:&]/g, '') // Remove colons and ampersands
     .replace(/\bthe\b/gi, '') // Remove "the" (case-insensitive)
     .toLowerCase(); // Convert to lowercase
@@ -115,8 +116,16 @@ function create_link(journal) {
     // Join the words with hyphens
     let formattedString = words.join('-');
     const url = `https://research.com/journal/${formattedString}`;
-    return `<a href="${url}" target="_blank" style="text-decoration: none;">${journal}</a>`
+    */
+  
+    return `<a href="${createGoogleSearchUrl(journal)}" target="_blank" style="text-decoration: none;">${journal}</a>`
 
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function createGoogleSearchUrl(journalName) {
+  const encodedQuery = encodeURIComponent(journalName);
+  const googleSearchUrl = `https://www.google.com/search?q=${encodedQuery}`;
+  return googleSearchUrl;
+}
+
 

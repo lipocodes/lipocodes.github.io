@@ -20,7 +20,6 @@ const journalPublishers = [
   { name: "Elsevier Journals", journals: elsevier_journals },
 ];
 
-let num_results = 0;
 
 document.getElementById('searchInput').addEventListener('input', function() {
   const searchTerm = this.value.toLowerCase();
@@ -41,9 +40,8 @@ document.getElementById('searchInput').addEventListener('input', function() {
     );
 
     if (filteredJournals.length > 0 && searchTerm.length > 3) {
-      publisherResultsFound = true; 
-    }
- 
+      publisherResultsFound = true; // Set flag to true
+     
       // Add publisher title
       const publisherTitle = document.createElement('li');
       publisherTitle.textContent = publisher.name;
@@ -57,8 +55,6 @@ document.getElementById('searchInput').addEventListener('input', function() {
       resultsList.appendChild(lineBreak);
 
       filteredJournals.forEach(journal => {
-        num_results = num_results + 1;
-        document.getElementById('number_results').innerHTML = `<p style="font-size:12px;font-style: italic;font-weight: bold;">Results: ${num_results}</p>`
         const listItem = document.createElement('li');
         listItem.innerHTML = create_link(journal);
         if(publisher.name =="Taylor Francis Journals"){

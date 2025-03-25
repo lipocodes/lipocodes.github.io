@@ -22,6 +22,7 @@ const journalPublishers = [
 
 document.getElementById('searchInput').addEventListener('input', function() {
   const searchTerm = this.value.toLowerCase();
+  alert(searchTerm);
   //we ignore the first 2 letters
   if(searchTerm.length<3) return;
   const resultsList = document.getElementById('searchResults');
